@@ -152,7 +152,7 @@ def tcia_to_nifti(tcia_path, nii_out_path, modality='CT'):
 
 def tcia_to_nifti_study(study_path, nii_out_path):
     # conversion for a single study
-    # creates an hdf5 file for one patient
+    # creates NIfTI files for one patient
     # study_path:       path to a study directory containing all DICOM files for a specific study of one patient
     # nii_out_path:     path to a directory where all nifti files for one patient and study will be stored
     study_path = plb.Path(study_path)
