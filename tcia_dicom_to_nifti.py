@@ -7,10 +7,7 @@ import dicom2nifti
 import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
-import nilearn.image
-import shutil
 import pydicom
-from nibabel.orientations import ornt_transform, axcodes2ornt, inv_ornt_aff, apply_orientation, io_orientation, aff2axcodes
 
 
 def find_studies(path_to_data):
