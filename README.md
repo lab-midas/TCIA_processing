@@ -1,2 +1,2 @@
 # TCIA_processing
-autoPET TCIA pipeline
+Conversion scripts for conversion of TCIA data to different formats
