@@ -31,6 +31,8 @@ Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/
 
 ## Usage
 
+In order to run this script use the terminal and go to the path where the script is stored, then run:
+
 ```bash
 python tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 
@@ -80,6 +82,8 @@ pip install tqdm
 ```
 ## Usage
 
+In order to run this script use the terminal and go to the path where the script is stored, then run:
+
 ```bash
 python tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
 
@@ -112,6 +116,8 @@ pip install nibabel
 pip install numpy
 ```
 ## Usage
+
+In order to run this script use the terminal and go to the path where the script is stored, then run:
 
 ```bash
 python tcia_nifti_to_hdf5.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
