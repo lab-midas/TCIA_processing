@@ -1,13 +1,23 @@
 # data preparation (conversion of DICOM PET/CT studies to nifti format for running automated lesion segmentation)
 
+# run script from command line as follows:
+# python tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+
+# you can ignore the nilearn warning:
+# .../nilearn/image/resampling.py:527: UserWarning: Casting data from int16 to float32 warnings.warn("Casting data from %s to %s" % (data.dtype.name, aux)) 
+# or run as python -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+
 import pathlib as plb
 import tempfile
 import os
 import dicom2nifti
-import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
 import pydicom
+import sys
+import shutil
+import nilearn.image
+from tqdm import tqdm
 
 
 def find_studies(path_to_data):
@@ -175,10 +185,10 @@ def tcia_to_nifti_study(study_path, nii_out_path):
 
 def convert_tcia_to_nifti(study_dirs,nii_out_root):
     # batch conversion of all patients
-    for study_dir in study_dirs:
+    for study_dir in tqdm(study_dirs):
         
         patient = study_dir.parent.name
-        print(patient)
+        print("The following patient directory is being processed: ", patient)
 
         modalities = identify_modalities(study_dir)
         nii_out_path = plb.Path(nii_out_root/study_dir.parent.name)
@@ -198,8 +208,8 @@ def convert_tcia_to_nifti(study_dirs,nii_out_root):
 
 
 if __name__ == "__main__":
-    path_to_data = plb.Path(sys.argv[0])  # path to downloaded TCIA DICOM database, e.g. '...TCIA/manifest-1647440690095/FDG-PET-CT-Lesions/'
-    nii_out_root = plb.Path(sys.argv[1])  # path to the to be created NiFTI files, e.g. '...tcia_nifti/FDG-PET-CT-Lesions/')
+    path_to_data = plb.Path(sys.argv[1])  # path to downloaded TCIA DICOM database, e.g. '...TCIA/manifest-1647440690095/FDG-PET-CT-Lesions/'
+    nii_out_root = plb.Path(sys.argv[2])  # path to the to be created NiFTI files, e.g. '...tcia_nifti/FDG-PET-CT-Lesions/')
 
     study_dirs = find_studies(path_to_data)
     convert_tcia_to_nifti(study_dirs, nii_out_root)
