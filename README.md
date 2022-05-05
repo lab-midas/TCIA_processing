@@ -7,18 +7,18 @@ Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FD
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 or individually:
 
 ```bash
-pip install dicom2nifti
-pip install nibabel
-pip install pydicom
-pip install tqdm
-pip install numpy
-pip install nilearn
+pip3 install dicom2nifti
+pip3 install nibabel
+pip3 install pydicom
+pip3 install tqdm
+pip3 install numpy
+pip3 install nilearn
 ```
 
 ## Data structure
@@ -34,7 +34,7 @@ Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/
 In order to run this script use the terminal and go to the path where the script is stored, then run:
 
 ```bash
-python tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+python3 tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 
 ```
 where
@@ -51,7 +51,7 @@ you can ignore the nilearn warning:
 or suppress warnings by running the script as (after making sure everything works):
 
 ```bash
-python -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+python3 -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 ```
 
 ## Output
@@ -71,21 +71,21 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 or individually:
 
 ```bash
-pip install SimpleITK
-pip install tqdm
+pip3 install SimpleITK
+pip3 install tqdm
 ```
 ## Usage
 
 In order to run this script use the terminal and go to the path where the script is stored, then run:
 
 ```bash
-python tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
+python3 tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
 
 ```
 where
@@ -104,23 +104,23 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 or individually:
 
 ```bash
-pip install h5py
-pip install tqdm
-pip install nibabel
-pip install numpy
+pip3 install h5py
+pip3 install tqdm
+pip3 install nibabel
+pip3 install numpy
 ```
 ## Usage
 
 In order to run this script use the terminal and go to the path where the script is stored, then run:
 
 ```bash
-python tcia_nifti_to_hdf5.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
+python3 tcia_nifti_to_hdf5.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
 
 ```
 where
