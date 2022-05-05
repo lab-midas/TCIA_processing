@@ -2,7 +2,7 @@
 #(the .mha format is required by grand-challenge.org as input and ouput data of algorithms)
 
 #run script from command line as follows:
-# python tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI//FDG-PET-CT-Lesions/
+# python tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA//FDG-PET-CT-Lesions/
 
 import SimpleITK as sitk
 import pathlib as plb
