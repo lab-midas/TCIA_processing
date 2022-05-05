@@ -4,7 +4,7 @@
 # python tcia_dicom_to_nifti.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
 
 import h5py
-import tqdm
+from tqdm import tqdm
 import pathlib as plb
 import sys
 import os
@@ -85,7 +85,7 @@ def convert_nifti_to_hdf5(study_dirs, path_to_h5_data):
 
     h5_file = h5py.File(path_to_h5_data, 'w')
 
-    for pat_dir in tqdm.tqdm(study_dirs):
+    for pat_dir in tqdm(study_dirs):
 
         patient = pat_dir.parent.name
         study   = pat_dir.name
