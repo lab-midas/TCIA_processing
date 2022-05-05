@@ -1,5 +1,8 @@
 # data preparation (conversion of DICOM PET/CT studies to HDF5 format for running automated lesion segmentation)
 
+# run script from command line as follows:
+# python tcia_dicom_to_nifti.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
+
 import h5py
 import tqdm
 import pathlib as plb
@@ -120,8 +123,8 @@ def convert_nifti_to_hdf5(study_dirs, path_to_h5_data):
 
 
 if __name__ == "__main__":
-    path_to_data = sys.argv[0]     # path to converted NiFTI files (see tcia2nifti) from downloaded TCIA DICOM database e.g. '...tcia_nifti/FDG-PET-CT-Lesions/'
-    path_to_h5_data = sys.argv[1]  # path to the to be saved HDF5 file, e.g. '...hdf5/FDG-PET-CT-Lesions.hdf5'
+    path_to_data = sys.argv[1]     # path to converted NiFTI files (see tcia2nifti) from downloaded TCIA DICOM database e.g. '...tcia_nifti/FDG-PET-CT-Lesions/'
+    path_to_h5_data = sys.argv[2]  # path to the to be saved HDF5 file, e.g. '...hdf5/FDG-PET-CT-Lesions.hdf5'
     study_dirs = find_studies(path_to_data)
     convert_nifti_to_hdf5(study_dirs, path_to_h5_data)
 
