@@ -6,7 +6,7 @@ Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FD
 
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
-Use the terminal and go to the path where the requirements.txt is stored, then run:
+Use the terminal and navigate to the path where the requirements.txt is stored, then run:
 
 ```bash
 pip3 install -r requirements.txt
@@ -33,7 +33,7 @@ Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/
 
 ## Usage
 
-In order to run this script use the terminal and go to the path where the script is stored, then run:
+In order to run this script use the terminal and navigate to the path where the script is stored, then run:
 
 ```bash
 python3 tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
@@ -72,7 +72,7 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
-Use the terminal and go to the path where the requirements.txt is stored, then run:
+Use the terminal and navigate to the path where the requirements.txt is stored, then run:
 
 ```bash
 pip3 install -r requirements.txt
@@ -86,7 +86,7 @@ pip3 install tqdm
 ```
 ## Usage
 
-In order to run this script use the terminal and go to the path where the script is stored, then run:
+In order to run this script use the terminal and navigate to the path where the script is stored, then run:
 
 ```bash
 python3 tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
@@ -116,7 +116,7 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 
 To run the script you will need a number of python packages that can be installed either by using the provided requirements file (requirements.txt, which includes some additional packages for other conversion scripts):
 
-Use the terminal and go to the path where the requirements.txt is stored, then run:
+Use the terminal and navigate to the path where the requirements.txt is stored, then run:
 
 ```bash
 pip3 install -r requirements.txt
@@ -132,7 +132,7 @@ pip3 install numpy
 ```
 ## Usage
 
-In order to run this script use the terminal and go to the path where the script is stored, then run:
+In order to run this script use the terminal and navigate to the path where the script is stored, then run:
 
 ```bash
 python3 tcia_nifti_to_hdf5.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5
