@@ -51,6 +51,12 @@ or suppress warnings by running the script as (after making sure everything work
 ```bash
 python -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 ```
+
+## Output
+The resulting NIfTI directory will have the following structure:
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/52936169/165639700-164c5778-556f-4492-96ed-fa21a9a51603.png">
+
 ## Execution time
 running the script can take multiple hours
 
