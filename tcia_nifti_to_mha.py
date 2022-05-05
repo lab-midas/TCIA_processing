@@ -6,7 +6,7 @@
 
 import SimpleITK as sitk
 import pathlib as plb
-import tqdm
+from tqdm import tqdm
 import os
 import sys
 
@@ -31,7 +31,7 @@ def nii_to_mha(nii_path, mha_out_path): # converts a .nii.gz file to .mha and sa
 
 def convert_to_mha(study_dirs,path_to_mha_data): # main function converting the entire dataset from .nii.gz to .mha
         
-    for study_dir in tqdm.tqdm(study_dirs):
+    for study_dir in tqdm(study_dirs):
 
         patient = study_dir.parent.name
         study   = study_dir.name
