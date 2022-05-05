@@ -1,9 +1,8 @@
 # converts the entire dataset from the .nii.gz format to the .mha format
 #(the .mha format is required by grand-challenge.org as input and ouput data of algorithms)
 
-# inputs:
-# input 1: path_to_nii_data : path to nifti data e.g.  .../nifti/FDG-PET-CT-Lesions/
-# input 2: path_to_mha_data : output path for mha data ... /mha/FDG-PET-CT-Lesions/ (will be created if non existing)
+#run script from command line as follows:
+# python tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI//FDG-PET-CT-Lesions/
 
 import SimpleITK as sitk
 import pathlib as plb
@@ -64,8 +63,8 @@ def convert_to_mha(study_dirs,path_to_mha_data): # main function converting the 
 
 if __name__ == "__main__":
 
-    path_to_nii_data = sys.argv[0] # path to nifti data e.g. .../nifti/FDG-PET-CT-Lesions/
-    path_to_mha_data = sys.argv[1] # output path for mha data ... /mha/FDG-PET-CT-Lesions/ (will be created if non existing)
+    path_to_nii_data = sys.argv[1] # path to nifti data e.g. .../nifti/FDG-PET-CT-Lesions/
+    path_to_mha_data = sys.argv[2] # output path for mha data ... /mha/FDG-PET-CT-Lesions/ (will be created if non existing)
     study_dirs = find_studies(path_to_nii_data)
 
     convert_to_mha(study_dirs,path_to_mha_data)
