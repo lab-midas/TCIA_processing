@@ -1,6 +1,6 @@
 # TCIA_processing: tcia_dicom_to_nifti.py
 
-Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FDG-PET-CT-Lesion, doi: ...)
+Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FDG-PET-CT-Lesion, doi: ...).
 
 ## Requirements
 
@@ -44,9 +44,9 @@ where
 ```/PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/```
 is the directory of the DICOM data downloaded from TCIA (see above: data structure) and
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
-is the path you want to store the NIfTI files in
+is the path you want to store the NIfTI files in.
 
-you can ignore the nilearn warning:
+You can ignore the nilearn warning:
 
 ```.../nilearn/image/resampling.py:527: UserWarning: Casting data from int16 to float32 warnings.warn("Casting data from %s to %s" % (data.dtype.name, aux))```
 
@@ -62,11 +62,11 @@ The resulting NIfTI directory will have the following structure:
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/52936169/165639700-164c5778-556f-4492-96ed-fa21a9a51603.png">
 
 ## Execution time
-running the script can take multiple hours
+Running the script can take multiple hours.
 
 # TCIA_processing: tcia_nifti_to_mha.py
 
-Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to_nifti.py - see above) to mha files
+Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to_nifti.py - see above) to mha files.
 
 ## Requirements
 
@@ -96,9 +96,9 @@ where
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
 is the directory of the NIfTI data generated using tcia_dicom_to_nifti.py (see above) and
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
-is the path you want to store the MHA files in
+is the path you want to store the MHA files in.
 
-you can ignore the nilearn warning:
+You can ignore the nilearn warning:
 
 ```.WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/Meta/src/itkMetaImageIO.cxx, line 669 MetaImageIO (0x2d9b300): Unsupported or empty metaData item intent_name of type Ssfound, won't be written to image file```
 
@@ -143,7 +143,7 @@ where
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
 is the directory of the NIfTI data generated using tcia_dicom_to_nifti.py (see above) and
 ```/PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5```
-is the path and filename of the hdf5 file to be created
+is the path and filename of the hdf5 file to be created.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
