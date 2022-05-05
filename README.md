@@ -86,7 +86,6 @@ In order to run this script use the terminal and go to the path where the script
 
 ```bash
 python3 tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
-
 ```
 where
 
@@ -94,6 +93,16 @@ where
 is the directory of the NIfTI data generated using tcia_dicom_to_nifti.py (see above) and
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
 is the path you want to store the MHA files in
+
+you can ignore the nilearn warning:
+
+```.WARNING: In /tmp/SimpleITK-build/ITK/Modules/IO/Meta/src/itkMetaImageIO.cxx, line 669 MetaImageIO (0x2d9b300): Unsupported or empty metaData item intent_name of type Ssfound, won't be written to image file```
+
+or suppress warnings by running the script as (after making sure everything works):
+
+```bash
+python3 -W ignore tcia_nifti_to_mha.py /PATH/TO/NIFTI/FDG-PET-CT-Lesions/ /PATH/TO/MHA/FDG-PET-CT-Lesions/
+```
 
 # TCIA_processing: tcia_nifti_to_hdf5.py
 
