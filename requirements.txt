@@ -5,7 +5,6 @@ pydicom
 h5py
 tqdm
 SimpleITK
-tqdm
 nilearn
 
 
