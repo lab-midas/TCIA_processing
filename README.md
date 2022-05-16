@@ -121,5 +121,24 @@ is the directory of the NIfTI data generated using tcia_dicom_to_nifti.py (see a
 ```/PATH/TO/HDF5/FDG-PET-CT-Lesions.hdf5```
 is the path and filename of the hdf5 file to be created.
 
+## Package Versions
+All scripts were tested under python 3.9 with the following package versions:
+   
+dicom2nifti==2.3.3
+
+nibabel==3.2.2
+
+pydicom==2.3.0
+
+h5py==3.6.0
+
+tqdm==4.64.0
+
+SimpleITK==2.1.1.2
+
+nilearn==0.9.1
+
+numpy==1.22.3
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
