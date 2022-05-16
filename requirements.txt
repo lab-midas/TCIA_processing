@@ -1,11 +1,11 @@
 numpy
-dicom2nifti==2.3.3
-nibabel==3.2.2
-pydicom==2.3.0
-h5py==3.6.0
-tqdm==4.64.0
-SimpleITK==2.1.1.2
-tqdm==4.64.0
-nilearn==0.9.1
+dicom2nifti
+nibabel
+pydicom
+h5py
+tqdm
+SimpleITK
+tqdm
+nilearn
 
 
