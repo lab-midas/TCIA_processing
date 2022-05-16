@@ -1,3 +1,4 @@
+numpy
 dicom2nifti==2.3.3
 nibabel==3.2.2
 pydicom==2.3.0
@@ -6,5 +7,5 @@ tqdm==4.64.0
 SimpleITK==2.1.1.2
 tqdm==4.64.0
 nilearn==0.9.1
-numpy==1.22.3
+
 
