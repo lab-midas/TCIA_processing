@@ -4,7 +4,7 @@ Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FD
 
 ## Requirements
 
-To run the script you will need a number of python packages. Use the terminal:
+To run the script you will need a number of python packages. Use the terminal and run sequentially:
 
 ```bash
 pip3 install dicom2nifti
@@ -62,7 +62,7 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 
 ## Requirements
 
-To run the script you will need a number of python packages. Use the terminal:
+To run the script you will need a number of python packages. Use the terminal and run sequentially:
 
 ```bash
 pip3 install SimpleITK
@@ -98,7 +98,7 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 
 ## Requirements
 
-To run the script you will need a number of python packages. Use the terminal:
+To run the script you will need a number of python packages. Use the terminal and run sequentially:
 
 ```bash
 pip3 install h5py
