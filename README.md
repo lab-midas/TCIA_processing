@@ -7,14 +7,18 @@ Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FD
 To run the script you will need a number of python packages. Use the terminal and run sequentially:
 
 ```bash
+pip3 install numpy
 pip3 install dicom2nifti
 pip3 install nibabel
 pip3 install pydicom
 pip3 install tqdm
-pip3 install numpy
 pip3 install nilearn
 ```
-
+in case you use a Colab or Jupyter notebook and cannot use the terminal you can perform these installations by adding a "!" in front of the commands, e.g.
+```python
+!pip3 install numpy
+...
+```
 ## Data structure
 DICOM data downloaded from TCIA will have the following format:
 
@@ -68,6 +72,11 @@ To run the script you will need a number of python packages. Use the terminal an
 pip3 install SimpleITK
 pip3 install tqdm
 ```
+in case you use a Colab or Jupyter notebook and cannot use the terminal you can perform these installations by adding a "!" in front of the commands, e.g.
+```python
+!pip3 install SimpleITK
+...
+```
 ## Usage
 
 In order to run this script use the terminal and navigate to the path where the script is stored, then run:
@@ -101,10 +110,15 @@ Conversion script for conversion of TCIA NIfTI data (created using tcia_dicom_to
 To run the script you will need a number of python packages. Use the terminal and run sequentially:
 
 ```bash
+pip3 install numpy
 pip3 install h5py
 pip3 install tqdm
 pip3 install nibabel
-pip3 install numpy
+```
+in case you use a Colab or Jupyter notebook and cannot use the terminal you can perform these installations by adding a "!" in front of the commands, e.g.
+```python
+!pip3 install numpy
+...
 ```
 ## Usage
 
