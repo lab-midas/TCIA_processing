@@ -1,11 +1,11 @@
 # data preparation (conversion of DICOM PET/CT studies to nifti format for running automated lesion segmentation)
 
 # run script from command line as follows:
-# python tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+# python tcia_dicom_to_nifti.py /PATH/TO/DICOM/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 
 # you can ignore the nilearn warning:
 # .../nilearn/image/resampling.py:527: UserWarning: Casting data from int16 to float32 warnings.warn("Casting data from %s to %s" % (data.dtype.name, aux)) 
-# or run as python -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+# or run as python -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 
 import pathlib as plb
 import tempfile
@@ -208,7 +208,7 @@ def convert_tcia_to_nifti(study_dirs,nii_out_root):
 
 
 if __name__ == "__main__":
-    path_to_data = plb.Path(sys.argv[1])  # path to downloaded TCIA DICOM database, e.g. '...TCIA/manifest-1647440690095/FDG-PET-CT-Lesions/'
+    path_to_data = plb.Path(sys.argv[1])  # path to downloaded TCIA DICOM database, e.g. '.../FDG-PET-CT-Lesions/'
     nii_out_root = plb.Path(sys.argv[2])  # path to the to be created NiFTI files, e.g. '...tcia_nifti/FDG-PET-CT-Lesions/')
 
     study_dirs = find_studies(path_to_data)
