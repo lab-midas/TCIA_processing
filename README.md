@@ -22,7 +22,7 @@ in case you use a Colab or Jupyter notebook and cannot use the terminal you can 
 ## Data structure
 DICOM data downloaded from TCIA will have the following format:
 
-Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ :
+Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/FDG-PET-CT-Lesions/ :
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/52936169/165639574-58c53bd0-2ff2-4525-9147-f254521840dd.png">
 
@@ -32,12 +32,12 @@ Directory structure of the original DICOM data within the folder /PATH/TO/DICOM/
 In order to run this script use the terminal and navigate to the path where the script is stored, then run:
 
 ```bash
-python3 tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+python3 tcia_dicom_to_nifti.py /PATH/TO/DICOM/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 
 ```
 where
 
-```/PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/```
+```/PATH/TO/DICOM/FDG-PET-CT-Lesions/```
 is the directory of the DICOM data downloaded from TCIA (see above: data structure) and
 ```/PATH/TO/NIFTI/FDG-PET-CT-Lesions/```
 is the path you want to store the NIfTI files in.
@@ -49,7 +49,7 @@ You can ignore the nilearn warning:
 or suppress warnings by running the script as (after making sure everything works):
 
 ```bash
-python3 -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/manifest-1647440690095/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
+python3 -W ignore tcia_dicom_to_nifti.py /PATH/TO/DICOM/FDG-PET-CT-Lesions/ /PATH/TO/NIFTI/FDG-PET-CT-Lesions/
 ```
 
 ## Output
