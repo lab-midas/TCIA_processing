@@ -48,21 +48,11 @@ def get_series_descriptions(study_dir):
     
     return descriptions
 
-def dcm2nii(dcm_path, nii_out_path, series_name):
+def dcm2nii(dcm_path, nii_out_path):
     # conversion of DICOM to nifti and save in nii_out_path
-    with tempfile.TemporaryDirectory() as tmp: 
-        tmp = plb.Path(str(tmp))
-        # convert dicom directory to nifti
-        # (store results in temp directory)
-        dicom2nifti.convert_directory(str(dcm_path), str(tmp), 
+    
+    dicom2nifti.convert_directory(str(dcm_path), str(nii_out_path), 
                                       compression=True, reorient=True)
-        nii = next(tmp.glob('*nii.gz'))
-        # copy niftis to output folder with consistent naming
-        series_name = series_name.replace(" ", "_")
-        series_name = series_name.replace(".", "")
-        file_name = series_name + '.nii.gz'
-
-        shutil.copy(nii, nii_out_path/file_name)
  
 def convert_tcia_to_nifti(study_dirs,nii_out_root):
     # batch conversion of all patients
@@ -78,7 +68,7 @@ def convert_tcia_to_nifti(study_dirs,nii_out_root):
 
         for series in series_descriptions:
             try:
-                dcm2nii(series, nii_out_path, series_descriptions[series])
+                dcm2nii(series, nii_out_path)
             except:
                 # ... PRINT THE ERROR MESSAGE ... #
                 print('An error occurred, data may be (partially) not converted: '+ str(series))
