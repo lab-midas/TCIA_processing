@@ -32,21 +32,12 @@ def find_studies(path_to_data):
     return study_dirs
 
 
-def get_series_descriptions(study_dir):
-    # returns dictionary with series paths and corresponsing series descriptions
+def get_series(study_dir):
+    # returns paths of series directories
     study_dir = plb.Path(study_dir)
-    sub_dirs = list(study_dir.glob('*'))
+    series_dirs = list(study_dir.glob('*'))
 
-    descriptions = {}
-
-    for dir in sub_dirs:
-        first_file = next(dir.glob('*.dcm'))
-        ds = pydicom.dcmread(str(first_file))
-        #print(ds)
-        description = ds.SeriesDescription
-        descriptions[dir] = description
-    
-    return descriptions
+    return series_dirs
 
 def dcm2nii(dcm_path, nii_out_path):
     # conversion of DICOM to nifti and save in nii_out_path
@@ -61,12 +52,12 @@ def convert_tcia_to_nifti(study_dirs,nii_out_root):
         patient = study_dir.parent.name
         print("The following patient directory is being processed: ", patient)
 
-        series_descriptions = get_series_descriptions(study_dir)
+        series_dirs = get_series(study_dir)
 
         nii_out_path = plb.Path(nii_out_root/study_dir.name)
         os.makedirs(nii_out_path, exist_ok=True)
 
-        for series in series_descriptions:
+        for series in series_dirs:
             try:
                 dcm2nii(series, nii_out_path)
             except:
