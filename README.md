@@ -1,6 +1,6 @@
 # TCIA_processing: tcia_dicom_to_nifti.py
 
-Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FDG-PET-CT-Lesion, doi: ...).
+Conversion script for conversion of TCIA DICOM data to NIfTI format (dataset: FDG-PET-CT-Lesion, doi: <a href="https://doi.org/10.7937/gkr0-xv29"><img src="https://img.shields.io/badge/DOI-10.7937%2Fgkr0--xv29-blue"></a>).
 
 ## Requirements
 
